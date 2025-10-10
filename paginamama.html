@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lic. Fernanda Paola Carroza - Psicóloga</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6c63ff;
+            --secondary: #a084e8;
+            --accent: #f9f7fd;
+            --text: #2d2d2d;
+            --bg: #f4f6fb;
+            --white: #fff;
+        }
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: var(--bg);
+            margin: 0;
+            padding: 0;
+            color: var(--text);
+        }
+        header {
+            background: linear-gradient(90deg, var(--primary) 60%, var(--secondary) 100%);
+            color: var(--white);
+            padding: 32px 0 22px 0;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(108,99,255,0.08);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+        .container {
+            max-width: 1050px;
+            margin: 40px auto;
+            padding: 36px 28px;
+            background: var(--white);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(108,99,255,0.08);
+        }
+        .hero {
+            text-align: center;
+            padding: 36px 10px 28px 10px;
+            background: linear-gradient(135deg, var(--accent) 0%, #e3e0fa 100%);
+            border-radius: 14px;
+            margin-bottom: 32px;
+        }
+        .hero h1 {
+            color: var(--primary);
+            font-size: 2em;
+            margin: 0;
+            font-weight: 700;
+        }
+        .hero p {
+            color: #5f5b8c;
+            font-size: 1.18em;
+            margin-top: 10px;
+        }
+        .two-columns {
+            display: flex;
+            gap: 40px;
+            margin-top: 30px;
+            align-items: flex-start;
+        }
+        .form-section {
+            flex: 2;
+            background: #f7f6fe;
+            border-radius: 14px;
+            padding: 30px 24px;
+            box-shadow: 0 2px 12px rgba(108,99,255,0.04);
+        }
+        .form-section h2 {
+            color: var(--primary);
+            margin-bottom: 18px;
+            font-size: 1.3em;
+            font-weight: 700;
+        }
+        form label {
+            font-weight: 600;
+            color: #5f5b8c;
+            margin-bottom: 5px;
+            display: block;
+        }
+        form input, form select, form textarea, form button {
+            width: 100%;
+            padding: 11px;
+            margin-bottom: 15px;
+            border-radius: 7px;
+            border: 1px solid #d1d0e7;
+            font-size: 1em;
+            background: var(--white);
+            transition: border 0.2s;
+        }
+        form input:focus, form select:focus, form textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px #6c63ff33;
+        }
+        form button {
+            background: linear-gradient(90deg, var(--primary) 60%, var(--secondary) 100%);
+            color: var(--white);
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            letter-spacing: 1px;
+        }
+        form button:hover {
+            background: linear-gradient(90deg, var(--secondary) 60%, var(--primary) 100%);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .taller-section {
+            flex: 1;
+            padding: 26px 18px;
+            background: linear-gradient(135deg, #f7f6fe 0%, #e3e0fa 100%);
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(108,99,255,0.06);
+        }
+        .taller-section h2 {
+            text-align: center;
+            color: var(--secondary);
+            margin-bottom: 16px;
+            font-size: 1.15em;
+            font-weight: 700;
+        }
+        .taller-section p, .taller-section ul {
+            color: #5f5b8c;
+            font-size: 1.05em;
+        }
+        .taller-section ul {
+            margin-top: 0;
+            margin-bottom: 12px;
+            padding-left: 18px;
+        }
+        .taller-section li {
+            margin-bottom: 4px;
+        }
+        footer {
+            text-align: center;
+            padding: 18px;
+            background: linear-gradient(90deg, var(--primary) 60%, var(--secondary) 100%);
+            color: var(--white);
+            font-size: 1em;
+            margin-top: 36px;
+            border-radius: 0 0 10px 10px;
+            letter-spacing: 1px;
+        }
+        @media (max-width: 900px) {
+            .two-columns {
+                flex-direction: column;
+                gap: 24px;
+            }
+            .container {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Lic. Fernanda Paola Carroza</h1>
+</header>
+
+<div class="container">
+    <div class="hero">
+        <h1>Psicóloga</h1>
+        <p>Atención presencial y online</p>
+    </div>
+
+    <div class="two-columns">
+        <div class="form-section">
+            <h2>Solicitá tu turno</h2>
+            <form id="formTurno">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="fecha">Fecha deseada:</label>
+                <input type="date" id="fecha" name="fecha" required>
+
+                <label for="hora">Hora:</label>
+                <select id="hora" name="hora" required>
+                    <option value="">Seleccionar</option>
+                    <option>09:00</option>
+                    <option>10:00</option>
+                    <option>11:00</option>
+                    <option>14:00</option>
+                    <option>15:00</option>
+                    <option>16:00</option>
+                    <option>17:00</option>
+                </select>
+
+                <label for="motivo">Motivo de la consulta:</label>
+                <textarea id="motivo" name="motivo" rows="3" required></textarea>
+
+                <button type="submit">Solicitar turno</button>
+            </form>
+        </div>
+
+        <div class="taller-section">
+            <h2>Taller de Estimulación Cognitiva</h2>
+            <p><strong>Dirigido a:</strong> Adultos mayores con o sin deterioro cognitivo</p>
+            <p><strong>Objetivos:</strong></p>
+            <ul>
+                <li>Estimular y fortalecer las funciones cognitivas para favorecer el mantenimiento y/o la mejora en el desempeño de las actividades de la vida diaria.</li>
+            </ul>
+            <p><strong>Trabajaremos:</strong></p>
+            <ul>
+                <li>Memoria</li>
+                <li>Atención</li>
+                <li>Concentración</li>
+                <li>Lenguaje</li>
+                <li>Praxias</li>
+            </ul>
+            <p><strong>Contacto:</strong></p>
+            <ul>
+                <li>Lic. Fernanda P. Carroza</li>
+                <li>📞 2994110137</li>
+                <li>Cupos limitados.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<footer>
+    &copy; 2025 Lic. Fernanda Paola Carroza - Psicóloga
+</footer>
+</body>
+</html>
